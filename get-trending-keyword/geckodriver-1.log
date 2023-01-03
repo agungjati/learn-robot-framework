@@ -1,0 +1,18 @@
+1672456750411	geckodriver	INFO	Listening on 127.0.0.1:54475
+1672456750421	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "48677" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiled4LewB"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1672456751797	Marionette	INFO	Marionette enabled
+1672456751804	Marionette	INFO	Listening on port 44625
+Read port: 44625
+WebDriver BiDi listening on ws://127.0.0.1:48677
+1672456752082	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiled4LewB/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:48677/devtools/browser/e737f5f2-090a-4dba-96b4-81dca1e679d7
+JavaScript warning: https://www.tokopedia.com/PW70/0X-F/iacA/3LTO/aQ/9QOf0GDXra/LGE4AQ/N09K/FT08b0cB, line 1: unreachable code after return statement
+JavaScript warning: https://www.tokopedia.com/PW70/0X-F/iacA/3LTO/aQ/9QOf0GDXra/LGE4AQ/N09K/FT08b0cB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.tokopedia.com/PW70/0X-F/iacA/3LTO/aQ/9QOf0GDXra/LGE4AQ/N09K/FT08b0cB, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1672457092560	Marionette	INFO	Stopped listening on port 44625
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.

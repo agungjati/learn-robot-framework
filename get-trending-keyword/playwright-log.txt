@@ -1,0 +1,23 @@
+{"level":30,"time":"2022-12-30T16:18:57.469Z","pid":20546,"hostname":"agung2022014","msg":"Listening on 37911"}
+{"level":30,"time":"2022-12-30T16:18:57.569Z","pid":20546,"hostname":"agung2022014","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-12-30T16:18:57.570Z","pid":20546,"hostname":"agung2022014","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-12-30T16:18:57.573Z","pid":20546,"hostname":"agung2022014","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-12-30T16:18:57.573Z","pid":20546,"hostname":"agung2022014","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (/home/agung-kuliah/.local/lib/python3.8/site-packages/Browser/wrapper/index.js:7958:15)
+    at PlaywrightServer.getActiveBrowser (/home/agung-kuliah/.local/lib/python3.8/site-packages/Browser/wrapper/index.js:8469:59)
+    at PlaywrightServer.setTimeout (/home/agung-kuliah/.local/lib/python3.8/site-packages/Browser/wrapper/index.js:8711:69)
+    at /home/agung-kuliah/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (/home/agung-kuliah/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:393:13)
+    at ServerHttp2Stream.onEnd (/home/agung-kuliah/.local/lib/python3.8/site-packages/Browser/wrapper/node_modules/@grpc/grpc-js/build/src/server-call.js:380:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+=============================================================
+{"level":30,"time":"2022-12-30T16:18:57.589Z","pid":20546,"hostname":"agung2022014","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-12-30T16:18:57.589Z","pid":20546,"hostname":"agung2022014","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-12-30T16:18:57.593Z","pid":20546,"hostname":"agung2022014","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-12-30T16:18:57.594Z","pid":20546,"hostname":"agung2022014","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-12-30T16:18:57.621Z","pid":20546,"hostname":"agung2022014","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2022-12-30T16:18:57.621Z","pid":20546,"hostname":"agung2022014","msg":"End of node method closeAllBrowsers"}

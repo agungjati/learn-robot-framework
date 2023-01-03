@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.8.10 on linux)" generated="20230103 22:01:00.096" rpa="false" schemaversion="3">
+<suite id="s1" name="Index" source="/home/agung-kuliah/Documents/robot-framework/get-trending-keyword/index.robot">
+<test id="s1-t1" name="Example Test" line="12">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${browser}</arg>
+<arg>url=${URL}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230103 22:01:02.610" level="INFO">Opening browser 'Chrome' to base url 'https://www.tokopedia.com/'.</msg>
+<status status="PASS" starttime="20230103 22:01:02.609" endtime="20230103 22:01:06.567"/>
+</kw>
+<kw name="Make Excel File" library="make_excel">
+<arg>NewExcel.xlsx</arg>
+<status status="PASS" starttime="20230103 22:01:06.568" endtime="20230103 22:01:06.586"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${elements}</var>
+<arg>css=\#trending-popular-keywords a</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230103 22:01:06.627" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="ad0802ba0a3a634f36ac9aafd4740443", element="b7c88a37-6256-43c5-8daa-2db6ace0116f")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20230103 22:01:06.586" endtime="20230103 22:01:06.628"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${index}</var>
+<arg>${1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230103 22:01:06.639" level="INFO">${index} = 1</msg>
+<status status="PASS" starttime="20230103 22:01:06.636" endtime="20230103 22:01:06.639"/>
+</kw>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{elements}</value>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ad0802ba0a3a634f36ac9aafd4740443", element="b7c88a37-6256-43c5-8daa-2db6ace0116f")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230103 22:01:06.715" level="INFO">Kursi Kantor</msg>
+<status status="PASS" starttime="20230103 22:01:06.642" endtime="20230103 22:01:06.715"/>
+</kw>
+<kw name="Add Value" library="make_excel">
+<arg>NewExcel.xlsx</arg>
+<arg>A${index}</arg>
+<arg>${element.text}</arg>
+<status status="PASS" starttime="20230103 22:01:06.716" endtime="20230103 22:01:06.793"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${index}</var>
+<arg>${${index} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230103 22:01:06.799" level="INFO">${index} = 2</msg>
+<status status="PASS" starttime="20230103 22:01:06.797" endtime="20230103 22:01:06.799"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${index}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230103 22:01:06.799" level="INFO">2</msg>
+<status status="PASS" starttime="20230103 22:01:06.799" endtime="20230103 22:01:06.799"/>
+</kw>
+<status status="PASS" starttime="20230103 22:01:06.641" endtime="20230103 22:01:06.799"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ad0802ba0a3a634f36ac9aafd4740443", element="89543c85-c916-4fe0-8770-17d176962cb1")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230103 22:01:06.828" level="INFO">Kandang Kucing</msg>
+<status status="PASS" starttime="20230103 22:01:06.799" endtime="20230103 22:01:06.828"/>
+</kw>
+<kw name="Add Value" library="make_excel">
+<arg>NewExcel.xlsx</arg>
+<arg>A${index}</arg>
+<arg>${element.text}</arg>
+<status status="PASS" starttime="20230103 22:01:06.829" endtime="20230103 22:01:06.873"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${index}</var>
+<arg>${${index} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230103 22:01:06.875" level="INFO">${index} = 3</msg>
+<status status="PASS" starttime="20230103 22:01:06.873" endtime="20230103 22:01:06.875"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${index}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230103 22:01:06.876" level="INFO">3</msg>
+<status status="PASS" starttime="20230103 22:01:06.875" endtime="20230103 22:01:06.876"/>
+</kw>
+<status status="PASS" starttime="20230103 22:01:06.799" endtime="20230103 22:01:06.876"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ad0802ba0a3a634f36ac9aafd4740443", element="d4c4b227-c764-44dd-a822-c48bf804b574")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230103 22:01:06.941" level="INFO">Tas Selempang Pria</msg>
+<status status="PASS" starttime="20230103 22:01:06.876" endtime="20230103 22:01:06.941"/>
+</kw>
+<kw name="Add Value" library="make_excel">
+<arg>NewExcel.xlsx</arg>
+<arg>A${index}</arg>
+<arg>${element.text}</arg>
+<status status="PASS" starttime="20230103 22:01:06.942" endtime="20230103 22:01:07.055"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${index}</var>
+<arg>${${index} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230103 22:01:07.058" level="INFO">${index} = 4</msg>
+<status status="PASS" starttime="20230103 22:01:07.055" endtime="20230103 22:01:07.058"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${index}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230103 22:01:07.058" level="INFO">4</msg>
+<status status="PASS" starttime="20230103 22:01:07.058" endtime="20230103 22:01:07.058"/>
+</kw>
+<status status="PASS" starttime="20230103 22:01:06.876" endtime="20230103 22:01:07.058"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ad0802ba0a3a634f36ac9aafd4740443", element="83694c35-de93-4cd4-bd7d-a6a2975b76ea")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230103 22:01:07.090" level="INFO">Kalender 2023</msg>
+<status status="PASS" starttime="20230103 22:01:07.059" endtime="20230103 22:01:07.090"/>
+</kw>
+<kw name="Add Value" library="make_excel">
+<arg>NewExcel.xlsx</arg>
+<arg>A${index}</arg>
+<arg>${element.text}</arg>
+<status status="PASS" starttime="20230103 22:01:07.091" endtime="20230103 22:01:07.125"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${index}</var>
+<arg>${${index} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230103 22:01:07.128" level="INFO">${index} = 5</msg>
+<status status="PASS" starttime="20230103 22:01:07.125" endtime="20230103 22:01:07.128"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${index}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230103 22:01:07.128" level="INFO">5</msg>
+<status status="PASS" starttime="20230103 22:01:07.128" endtime="20230103 22:01:07.128"/>
+</kw>
+<status status="PASS" starttime="20230103 22:01:07.059" endtime="20230103 22:01:07.128"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ad0802ba0a3a634f36ac9aafd4740443", element="46e7232b-4bf4-4f69-aa4a-60f2e84f8f78")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230103 22:01:07.152" level="INFO">Oppo A53</msg>
+<status status="PASS" starttime="20230103 22:01:07.129" endtime="20230103 22:01:07.152"/>
+</kw>
+<kw name="Add Value" library="make_excel">
+<arg>NewExcel.xlsx</arg>
+<arg>A${index}</arg>
+<arg>${element.text}</arg>
+<status status="PASS" starttime="20230103 22:01:07.153" endtime="20230103 22:01:07.198"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${index}</var>
+<arg>${${index} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230103 22:01:07.201" level="INFO">${index} = 6</msg>
+<status status="PASS" starttime="20230103 22:01:07.198" endtime="20230103 22:01:07.201"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${index}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230103 22:01:07.201" level="INFO">6</msg>
+<status status="PASS" starttime="20230103 22:01:07.201" endtime="20230103 22:01:07.201"/>
+</kw>
+<status status="PASS" starttime="20230103 22:01:07.128" endtime="20230103 22:01:07.202"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ad0802ba0a3a634f36ac9aafd4740443", element="66501aee-6b8b-43be-971c-65cb7a308e25")&gt;</var>
+<kw name="Log" library="BuiltIn">
+<arg>${element.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230103 22:01:07.245" level="INFO">Iphone 11 Second</msg>
+<status status="PASS" starttime="20230103 22:01:07.202" endtime="20230103 22:01:07.245"/>
+</kw>
+<kw name="Add Value" library="make_excel">
+<arg>NewExcel.xlsx</arg>
+<arg>A${index}</arg>
+<arg>${element.text}</arg>
+<status status="PASS" starttime="20230103 22:01:07.245" endtime="20230103 22:01:07.281"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${index}</var>
+<arg>${${index} + ${1}}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230103 22:01:07.282" level="INFO">${index} = 7</msg>
+<status status="PASS" starttime="20230103 22:01:07.281" endtime="20230103 22:01:07.283"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${index}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230103 22:01:07.283" level="INFO">7</msg>
+<status status="PASS" starttime="20230103 22:01:07.283" endtime="20230103 22:01:07.283"/>
+</kw>
+<status status="PASS" starttime="20230103 22:01:07.202" endtime="20230103 22:01:07.283"/>
+</iter>
+<status status="PASS" starttime="20230103 22:01:06.640" endtime="20230103 22:01:07.283"/>
+</for>
+<kw name="Stop Recording Test" library="AutoRecorder">
+<arg>Example Test</arg>
+<doc>There is no need to execute this keyword manually.</doc>
+<msg timestamp="20230103 22:01:07.337" level="INFO" html="true">&lt;a href="recording_2.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="recording_2.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230103 22:01:07.284" endtime="20230103 22:01:07.337"/>
+</kw>
+<status status="PASS" starttime="20230103 22:01:00.563" endtime="20230103 22:01:07.284"/>
+</test>
+<status status="PASS" starttime="20230103 22:01:00.097" endtime="20230103 22:01:07.339"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Index">Index</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
