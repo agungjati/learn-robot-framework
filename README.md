@@ -2,3 +2,6 @@
 
 
 Robot Framework 6.0.1 (Python 3.8.10 on linux)
+- export file excel
+- record testing
+- take screenshot
