@@ -15,9 +15,10 @@ Example Test
 
     Input Text  css=input[aria-label="Cari di Tokopedia"]  Sepeda
     Click Button  css=button[aria-label="Kirimkan"]
+    Sleep  5s
     Wait Until Element Is Visible  data:testid:result-header-wrapper  30 seconds
     ${elements} =    Get WebElements  css=div[data-testid="master-product-card"] a.pcv3__info-content
-
+    Sleep  5s
     Make Excel File   NewExcel.xlsx   
    
     ${index}  Set Variable  ${1}

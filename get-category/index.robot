@@ -10,9 +10,13 @@ ${URL}=        https://www.tokopedia.com/
 
 *** Test Cases ***
 Example Test      
+    
     Open Browser   browser=${browser}   url=${URL}
-
+    Maximize Browser Window
+    
     Click Element  data:testid:headerText
+    Sleep  5 seconds
+    
     Wait Until Element Is Visible  data:testid:allCategories  30 seconds
     ${elements} =    Get WebElements  css=div[data-testid="allCategories"] a
 
